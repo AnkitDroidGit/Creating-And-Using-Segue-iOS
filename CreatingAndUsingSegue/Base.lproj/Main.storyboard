@@ -22,6 +22,9 @@
                                 <rect key="frame" x="130" y="525" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to SecondVC"/>
+                                <connections>
+                                    <segue destination="xiO-1X-a7b" kind="show" id="m65-Ph-KEv"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-N5-JCk">
                                 <rect key="frame" x="103" y="186" width="169" height="30"/>
