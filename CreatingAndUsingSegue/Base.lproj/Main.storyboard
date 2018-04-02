@@ -38,6 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="eUE-N5-JCk" id="MdU-xy-CP7"/>
                         <segue destination="xiO-1X-a7b" kind="show" identifier="goToSecondScreen" id="Xhb-jl-0Vh"/>
                     </connections>
                 </viewController>
@@ -45,20 +46,32 @@
             </objects>
             <point key="canvasLocation" x="68" y="145.27736131934034"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="PsA-n7-zFi">
             <objects>
-                <viewController id="xiO-1X-a7b" sceneMemberID="viewController">
+                <viewController id="xiO-1X-a7b" customClass="SecondViewController" customModule="CreatingAndUsingSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Au-qV-N1n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-Qh-s94">
+                                <rect key="frame" x="166" y="183" width="42" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZQR-HF-a9f"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="JoS-Qh-s94" id="Xxb-Iv-OBE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4x-ck-eBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="133"/>
+            <point key="canvasLocation" x="925.60000000000002" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

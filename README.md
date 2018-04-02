@@ -18,8 +18,34 @@
 - Now all we have to say that 
 
         performSegue(withIdentifie: "goToSecondScreen", sender : self)
+        
+        
+## Why need identifier for segues
+- Actually we can create multiple segues from single view controller to multiple view controllers.
+- We can trigger the other segue from other button on single view controller to some other view controller.
+- Since identifier is the string, we have to make sure that we use it exaclty  with casing to completely identical to how we names it in atribute inspector
 
 
 ## Passing data from one view controller to another using a segue
-- 
 
+- Lets consider what user does on first screen will determine the what will apear on second screen.
+- Lets take `TextField` on first screen  `ViewController` and  `Label` on second screen `SecondViewController`. We are going to ask user to enter some data on first screen and we will pass it to the second screen to display as result.
+- I have connected `TextField` to `ViewController`  and named it `textField` and  `Label` to `SecondViewController` and named it `label`.
+- Now override a method `prepare for segue` as below
+
+        override prepare (for segue: UIStoryboardSegue, sender: Any?){
+            if segue.indentifier == "goToSecondScreen" {
+        
+            }
+        }
+- Now lets create a prperty in `SecondViewController` called `textPassedOver`.
+            
+            var textPassedOver : String?
+            
+- Now we have to grab the reference of  `SecondViewController` and assign value to it from `textField`
+        
+            let destinationVC - segue.destination as! SecondViewController
+            destinationVC.textPassedOver textField.text
+
+- Now lets set `textPassedOver` value to `label` in `SecondViewController`.
+- And its working.
